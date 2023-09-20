@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/practico3/static/js/main.aec2090e.js",
+    "main.js": "/practico3/static/js/main.a4f04711.js",
     "static/js/787.f9640105.chunk.js": "/practico3/static/js/787.f9640105.chunk.js",
     "index.html": "/practico3/index.html",
-    "main.aec2090e.js.map": "/practico3/static/js/main.aec2090e.js.map",
+    "main.a4f04711.js.map": "/practico3/static/js/main.a4f04711.js.map",
     "787.f9640105.chunk.js.map": "/practico3/static/js/787.f9640105.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.aec2090e.js"
+    "static/js/main.a4f04711.js"
   ]
 }
