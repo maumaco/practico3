@@ -7,6 +7,7 @@ import { createContext, useState } from 'react';
 
 import AppHeading from './components/AppHeading.js';
 import Controls from './components/Controls.js';
+import Messages from './components/Messages.js';
 
 
 // Constantes importadas
@@ -47,6 +48,7 @@ export default function App() {
       >
         <main>
           <Controls />
+          <Messages />
         </main>
       </MainContext.Provider>
     </>
