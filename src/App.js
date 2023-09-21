@@ -1,37 +1,37 @@
 // React
 
-import { createContext } from 'react';
-import { useState } from 'react';
+import { createContext, useState } from 'react';
 
 
-
-// Componentes
+// Componentes importados
 
 import AppHeading from './components/AppHeading.js';
+import Controls from './components/Controls.js';
+
+
+// Constantes importadas
+
+import {
+  STATE_GAME,
+  STATE_SETTINGS,
+  TEXT_APP_HEADING
+} from './constants.js';
 
 
 
-// Constantes
-
-import { STATE_GAME } from './constants.js';
-import { STATE_SETTINGS } from './constants.js';
-import { TEXT_APP_HEADING } from './constants.js';
-
-
-
-// Contextos
+// Contextos exportados
 
 export const MainContext = createContext(null);
 
 
 
-// Aplicación
+// Definición del componente
 
 export default function App() {
-  // status.id: 'pause'
+  // status.id: 'start', 'invalid-name', 'invalid-rounds', 'valid-data', 'pause'
   const [game, setGame] = useState(STATE_GAME);
 
-  // status.id: 'start'
+  // status.id: 'pause', 'start'
   const [settings, setSettings] = useState(STATE_SETTINGS);
 
   return (
@@ -43,14 +43,10 @@ export default function App() {
       </header>
 
       <MainContext.Provider
-        value={{
-          game,
-          settings,
-          setGame,
-          setSettings
-        }}
+        value={{ game, settings, setGame, setSettings }}
       >
         <main>
+          <Controls />
         </main>
       </MainContext.Provider>
     </>
