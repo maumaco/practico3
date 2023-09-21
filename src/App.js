@@ -21,7 +21,7 @@ import { TEXT_APP_HEADING } from './constants.js';
 
 // Contextos
 
-const MainContext = createContext(null);
+export const MainContext = createContext(null);
 
 
 
