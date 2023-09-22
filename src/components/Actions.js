@@ -28,12 +28,12 @@ import {
   TEXT_CANCEL_BUTTON,
   TEXT_PLAY_BUTTON,
   TEXT_RESET_BUTTON
-} from '../constants.js';
+} from '../constants/constants.js';
 
 
 // Funciones importadas
 
-import { setRoundsToPlay } from '../functions.js';
+import { setRoundsToPlay } from '../functions/functions.js';
 
 
 

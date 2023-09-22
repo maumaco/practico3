@@ -10,7 +10,7 @@ import { MainContext } from '../App.js';
 
 // Constantes importadas
 
-import { ID_PAUSE } from '../constants.js';
+import { ID_PAUSE } from '../constants/constants.js';
 
 
 

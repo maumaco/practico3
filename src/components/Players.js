@@ -24,7 +24,7 @@ import {
   MSG_ROCK_PAPER_SCISSORS,
   TEXT_COMPUTER_HEADING,
   TEXT_DEFAULT_USER_HEADING
-} from '../constants.js';
+} from '../constants/constants.js';
 
 
 // Funciones importadas
@@ -34,7 +34,7 @@ import {
   setComputerSignalImage,
   setRoundWinner,
   setUserPlay
-} from '../functions.js';
+} from '../functions/functions.js';
 
 
 

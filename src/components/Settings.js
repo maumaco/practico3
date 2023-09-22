@@ -32,7 +32,7 @@ import {
   TEXT_MODE_LABEL,
   TEXT_ROUNDS_LABEL,
   TEXT_YOUR_NAME_LABEL
-} from '../constants.js';
+} from '../constants/constants.js';
 
 
 // Funciones importadas
@@ -43,7 +43,7 @@ import {
   searchRoundsValueErrors,
   searchYourNameValueErrors,
   setSettingsStatus
-} from '../functions.js';
+} from '../functions/functions.js';
 
 
 

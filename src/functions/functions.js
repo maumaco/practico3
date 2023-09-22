@@ -34,7 +34,7 @@ import {
   WIN_NOBODY,
   WIN_TIE,
   WIN_USER
-} from './constants.js';
+} from '../constants/constants.js';
 
 
 

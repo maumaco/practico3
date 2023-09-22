@@ -30,7 +30,7 @@ import {
   STATE_SETTINGS,
   TEXT_APP_HEADING,
   WIN_NOBODY
-} from './constants.js';
+} from './constants/constants.js';
 
 
 // Funciones importadas
@@ -40,7 +40,7 @@ import {
   setGameWinner,
   setPlayerScore,
   setRoundMessage
-} from './functions.js';
+} from './functions/functions.js';
 
 
 

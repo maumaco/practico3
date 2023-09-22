@@ -1,8 +1,8 @@
 // Recursos importados
 
-import paperImage from './assets/paper.png'
-import rockImage from './assets/rock.png'
-import scissorsImage from './assets/scissors.png'
+import paperImage from '../assets/paper.png'
+import rockImage from '../assets/rock.png'
+import scissorsImage from '../assets/scissors.png'
 
 
 
