@@ -1,6 +1,7 @@
 // Constantes importadas
 
 import {
+  ARR_PLAYS,
   CONFIG_ROUNDS_MAX_NUMBER,
   CONFIG_ROUNDS_MIN_NUMBER,
   CONFIG_YOUR_NAME_MAX_LENGTH,
@@ -17,9 +18,22 @@ import {
   ID_ROUNDS_INPUT,
   ID_VALID_DATA,
   ID_YOUR_NAME_INPUT,
+  MSG_COMPUTER_POINT,
+  MSG_COMPUTER_VICTORY,
+  MSG_TIE_NO_POINTS,
+  MSG_TIE_NO_VICTORY,
+  MSG_USER_POINT,
+  MSG_USER_VICTORY,
   MODE_BEST_OF_OPTION,
   MODE_PLAY_ALL_OPTION,
-  MSG_TO_PLAY
+  MSG_TO_PLAY,
+  PLAY_PAPER,
+  PLAY_ROCK,
+  PLAY_SCISSORS,
+  WIN_COMPUTER,
+  WIN_NOBODY,
+  WIN_TIE,
+  WIN_USER
 } from './constants.js';
 
 
@@ -97,7 +111,7 @@ export function searchYourNameValueErrors(value) {
 // **** CONFIGURACIÓN DEL ESTADO "SETTINGS" **** //
 
 
-// Configura la propiedad "status" según la evaluación del número de rondas y el modo de juego
+// Establece el valor de "settings.status" según la evaluación del número de rondas y el modo de juego
 
 export function setSettingsStatus(error, id) {
 
@@ -132,7 +146,112 @@ export function setSettingsStatus(error, id) {
 // **** CONFIGURACIÓN DEL ESTADO "GAME" **** //
 
 
-// Configura la propiedad "roundsToPlay" según el modo de juego y el número de rondas
+// Establece la jugada de la computadora según un número entero generado aleatoriamente
+
+export function setComputerPlay() {
+  return ARR_PLAYS[Math.floor(Math.random() * ARR_PLAYS.length)];
+}
+
+
+// Establece la imagen de la jugada de la computadora según su jugada y el atributo "id" de la imagen
+
+export function setComputerSignalImage(signalImagesArray, play) {
+  for (let i = 0; i < signalImagesArray.length; i++) {
+    if (signalImagesArray[i].id.includes(play)) {
+      return signalImagesArray[i].id;
+    }
+  }
+}
+
+
+// Establece un mensaje según el ganador del juego
+
+export function setGameMessage(gameWinner) {
+  let message = '';
+
+  if (gameWinner === WIN_USER) {
+    message = MSG_USER_VICTORY;
+  }
+  else if (gameWinner === WIN_COMPUTER) {
+    message = MSG_COMPUTER_VICTORY;
+  }
+  else if (gameWinner === WIN_TIE) {
+    message = MSG_TIE_NO_VICTORY;
+  }
+
+  return message;
+}
+
+
+// Establece el ganador del juego según el modo de juego, los marcadores y las rondas a jugar
+
+export function setGameWinner(mode, userScore, computerScore, roundsToPlay) {
+  let gameWinner;
+
+  if (mode === MODE_BEST_OF_OPTION) {
+    if (userScore === roundsToPlay) {
+      gameWinner = WIN_USER;
+    }
+    else if (computerScore === roundsToPlay) {
+      gameWinner = WIN_COMPUTER;
+    }
+    else {
+      gameWinner = WIN_NOBODY;
+    }
+  }
+  else if (mode === MODE_PLAY_ALL_OPTION) {
+    if (userScore + computerScore === roundsToPlay) {
+      if (userScore > computerScore) {
+        gameWinner = WIN_USER;
+      }
+      else if (computerScore > userScore) {
+        gameWinner = WIN_COMPUTER;
+      }
+      else {
+        gameWinner = WIN_TIE;
+      }
+    }
+    else {
+      gameWinner = WIN_NOBODY;
+    }
+  }
+
+  return gameWinner;
+}
+
+
+// Establece el marcador del usuario y la computadora según el ganador de la ronda
+
+export function setPlayerScore(player, roundWinner, score) {
+  if (player === roundWinner) {
+    return score + 1;
+  }
+  else {
+    return score;
+  }
+}
+
+
+// Establece un mensaje según el ganador de la ronda
+
+export function setRoundMessage(roundWinner) {
+  let message = '';
+
+  if (roundWinner === WIN_USER) {
+    message = MSG_USER_POINT;
+  }
+  else if (roundWinner === WIN_COMPUTER) {
+    message = MSG_COMPUTER_POINT;
+  }
+  else if (roundWinner === WIN_NOBODY) {
+    message = MSG_TIE_NO_POINTS;
+  }
+
+  return message;
+}
+
+
+// Establece las rondas a jugar según el modo de juego y el número de rondas
 
 export function setRoundsToPlay(mode, rounds) {
   let roundsToPlay;
@@ -147,4 +266,42 @@ export function setRoundsToPlay(mode, rounds) {
   }
 
   return roundsToPlay;
+}
+
+
+// Establece el ganador de la ronda según la jugada del usuario y la computadora
+
+export function setRoundWinner(userPlay, computerPlay) {
+  let roundWinner;
+
+  if (userPlay !== computerPlay) {
+    if (
+      (userPlay === PLAY_ROCK && computerPlay === PLAY_SCISSORS) ||
+      (userPlay === PLAY_PAPER && computerPlay === PLAY_ROCK) ||
+      (userPlay === PLAY_SCISSORS && computerPlay === PLAY_PAPER)
+    ) {
+      roundWinner = WIN_USER;
+    }
+    else {
+      roundWinner = WIN_COMPUTER;
+    }
+  }
+  else {
+    roundWinner = WIN_NOBODY;
+  }
+
+  return roundWinner;
+}
+
+
+// Establece la jugada del usuario según el atributo "id" de la imagen de la jugada seleccionada
+
+export function setUserPlay(id) {
+
+  for (let i = 0; i < ARR_PLAYS.length; i++) {
+
+    if (id.includes(ARR_PLAYS[i])) {
+      return ARR_PLAYS[i];
+    }
+  }
 }
