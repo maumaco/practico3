@@ -3,17 +3,17 @@
 import { useContext } from 'react';
 
 
-// Contextos importados
+// Contextos
 
 import { MainContext } from '../App.js';
 
 
-// Componentes importados
+// Componentes
 
 import Button from './Button.js';
 
 
-// Constantes importadas
+// Constantes
 
 import {
   ID_INVALID_NAME,
@@ -31,7 +31,7 @@ import {
 } from '../constants/constants.js';
 
 
-// Funciones importadas
+// Funciones
 
 import { setRoundsToPlay } from '../functions/functions.js';
 

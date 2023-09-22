@@ -3,18 +3,18 @@
 import { useContext } from 'react';
 
 
-// Contextos importados
+// Contextos
 
 import { MainContext } from '../App.js';
 
 
-// Componentes importados
+// Componentes
 
 import Select from './Select.js';
 import TextInput from './TextInput.js';
 
 
-// Constantes importadas
+// Constantes
 
 import {
   ARR_MODE_OPTIONS,
@@ -35,7 +35,7 @@ import {
 } from '../constants/constants.js';
 
 
-// Funciones importadas
+// Funciones
 
 import {
   sanitizeTextInputValue,

@@ -3,17 +3,17 @@
 import { useContext } from 'react';
 
 
-// Contextos importados
+// Contextos
 
 import { MainContext } from '../App.js';
 
 
-// Componentes importados
+// Componentes
 
 import Player from './Player.js';
 
 
-// Constantes importadas
+// Constantes
 
 import {
   ARR_COMPUTER_SIGNAL_IMAGES,
@@ -27,7 +27,7 @@ import {
 } from '../constants/constants.js';
 
 
-// Funciones importadas
+// Funciones
 
 import {
   setComputerPlay,

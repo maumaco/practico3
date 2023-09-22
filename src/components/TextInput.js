@@ -1,4 +1,4 @@
-// Componentes importados
+// Componentes
 
 import Label from './Label.js';
 

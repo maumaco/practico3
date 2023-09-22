@@ -1,4 +1,4 @@
-// Componentes importados
+// Componentes
 
 import PlayerHeading from './PlayerHeading.js';
 import PlayerScore from './PlayerScore.js';

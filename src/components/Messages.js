@@ -3,16 +3,12 @@
 import { useContext } from 'react';
 
 
-// Styled Components
-import styled from "styled-components";
-
-
-// Contextos importados
+// Contextos
 
 import { MainContext } from '../App.js';
 
 
-// Constantes importadas
+// Constantes
 
 import { ID_PAUSE } from '../constants/constants.js';
 

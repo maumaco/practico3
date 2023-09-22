@@ -1,4 +1,4 @@
-// Constantes importadas
+// Constantes
 
 import {
   ARR_PLAYS,

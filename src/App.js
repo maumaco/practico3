@@ -3,7 +3,7 @@
 import { createContext, useState } from 'react';
 
 
-// Componentes importados
+// Componentes
 
 import AppHeading from './components/AppHeading.js';
 import Controls from './components/Controls.js';
@@ -12,7 +12,7 @@ import Players from './components/Players.js';
 import Address from './components/Address.js';
 
 
-// Constantes importadas
+// Constantes
 
 import {
   ARR_ADDRESS_LINKS,
@@ -33,7 +33,7 @@ import {
 } from './constants/constants.js';
 
 
-// Funciones importadas
+// Funciones
 
 import {
   setGameMessage,
@@ -44,7 +44,7 @@ import {
 
 
 
-// Contextos exportados
+// Definición de contextos
 
 export const MainContext = createContext(null);
 

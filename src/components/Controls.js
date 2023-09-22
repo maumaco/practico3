@@ -1,4 +1,4 @@
-// Componentes importados
+// Componentes
 
 import Actions from './Actions.js';
 import Settings from './Settings.js';
