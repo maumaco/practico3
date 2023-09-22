@@ -9,11 +9,13 @@ import AppHeading from './components/AppHeading.js';
 import Controls from './components/Controls.js';
 import Messages from './components/Messages.js';
 import Players from './components/Players.js';
+import Address from './components/Address.js';
 
 
 // Constantes importadas
 
 import {
+  ARR_ADDRESS_LINKS,
   CONFIG_HAND_MOVEMENTS_TIMEOUT_MS,
   CONFIG_ROUND_OUTCOME_TIMEOUT_MS,
   ID_END,
@@ -137,6 +139,12 @@ export default function App() {
           <Players />
         </main>
       </MainContext.Provider>
+
+      <footer>
+        <Address
+          links={ARR_ADDRESS_LINKS}
+        />
+      </footer>
     </>
   );
 }

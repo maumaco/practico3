@@ -172,6 +172,13 @@ export const ARR_COMPUTER_SIGNAL_IMAGES = [
   { alt: ALT_SCISSORS_IMAGE, height: CONFIG_SIGNAL_IMAGES_HEIGHT, id: ID_COMPUTER_PREFIX + ID_SCISSORS_IMAGE, key: ID_SCISSORS_IMAGE, src: scissorsImage, width: CONFIG_SIGNAL_IMAGES_WIDTH }
 ];
 
+export const ARR_ADDRESS_LINKS = [
+  { href: 'https://maumaco.github.io/sobre-mi/', key: 1, linkText: 'Mau', previousText: 'Por ' },
+  { href: 'https://www.famaf.unc.edu.ar/', key: 2, linkText: 'FAMAF', previousText: '' },
+  { href: 'https://www.argentina.gob.ar/economia/conocimiento/argentina-programa', key: 3, linkText: 'Argentina Programa', previousText: '' },
+  { href: 'https://github.com/maumaco/practico3/tree/main', key: 4, linkText: 'código', previousText: 'Ver ' }
+];
+
 export const ARR_MODE_OPTIONS = [
   { key: MODE_BEST_OF_OPTION, text: TEXT_BEST_OF_OPTION, value: MODE_BEST_OF_OPTION },
   { key: MODE_PLAY_ALL_OPTION, text: TEXT_PLAY_ALL_OPTION, value: MODE_PLAY_ALL_OPTION }
