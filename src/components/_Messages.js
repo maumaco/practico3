@@ -3,10 +3,6 @@
 import { useContext } from 'react';
 
 
-// Styled Components
-import styled from "styled-components";
-
-
 // Contextos importados
 
 import { MainContext } from '../App.js';
